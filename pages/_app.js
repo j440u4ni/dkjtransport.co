@@ -10,6 +10,7 @@ import withRedux from 'next-redux-wrapper';
 
 import { authenticationReducer } from '../source/components/redux-reducers/authentication-reducer';
 import { apolloClientGuest } from '../source/components/apollo-client/apollo-initializer';
+import '../static/main-application.scss';
 
 const reduxLogger = createLogger();
 const makeStore = () => { return createStore(combineReducers({ authenticationReducer }), applyMiddleware(thunk,  reduxLogger)); }
